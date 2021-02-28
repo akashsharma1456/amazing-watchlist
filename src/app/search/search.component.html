@@ -1,1 +1,9 @@
-<p>search works!</p>
+<mat-form-field>
+  <mat-label>Search</mat-label>
+  <input matInput type="text" [(ngModel)]="query">
+  <button mat-button *ngIf="query" matSuffix mat-icon-button aria-label ="Clear" (click)="query=''">
+  </button>
+  <button mat-button matPrifix mat-icon-button aria-label="Search" (click)="Search()">
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>
