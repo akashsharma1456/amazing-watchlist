@@ -13,7 +13,6 @@ export class ShowDetailsComponent implements OnInit {
   show: Show;
   episodes: MatTableDataSource<Episode>;
   tableHeaders: Array<string>;
-
   constructor(private route: ActivatedRoute, private dummyService: DummyService) {
     this.tableHeaders = ['number', 'name', 'aired', 'summary'];
   }
@@ -29,7 +28,7 @@ export class ShowDetailsComponent implements OnInit {
     });
   }
   applyFilter(e: Event): void {
-    const filterValue = (event.target as HTMLInputElement).value;
+    const filterValue = (e.target as HTMLInputElement).value;
     this.episodes.filter = filterValue.trim().toLowerCase();
   }
 
