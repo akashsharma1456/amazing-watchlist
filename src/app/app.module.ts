@@ -19,6 +19,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { ErrorComponent } from './error/error.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { EncryptPipe } from './controls/encrypt.pipe';
+import { ShortenPipe } from './controls/shorten.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ShowDetailsComponent,
     SearchComponent,
     WatchlistComponent,
-    ErrorComponent
+    ErrorComponent,
+    EncryptPipe,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,
